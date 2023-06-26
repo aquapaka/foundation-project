@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-lg shadow-lg px-4 py-8 ml-16">
+  <div class="rounded-lg shadow-lg px-4 py-8 md:ml-16">
     <p class="text-center my-4">Hurry Up! The slots are filling fast</p>
     <!--  Name field  -->
     <div>

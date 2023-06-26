@@ -1,5 +1,5 @@
 <template>
-  <section class="container mx-auto grid grid-cols-3 gap-8 mt-20">
+  <section class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
     <div class="grid grid-cols-2 justify-center shadow-lg rounded-lg p-4">
       <p class="text-neutral text-center col-span-2 font-semibold py-2">Built by alumni of</p>
       <img class="mx-auto py-4" v-for="partnerShip in partnerShips" :src="partnerShip.imageUrl" :alt="partnerShip.name">

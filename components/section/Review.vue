@@ -1,7 +1,7 @@
 <template>
-  <section class="container mx-auto text-center">
+  <section class="container mx-auto text-center mt-12">
     <h2>Students and parents <span class="underline decoration-primary">love Codingal</span></h2>
-    <div class="grid grid-cols-2 gap-6 px-32 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:px-8 xl:px-24 py-12">
       <ReviewCard v-for="review in reviews"
                   :avatar-url="review.avatarUrl"
                   :name="review.name"
