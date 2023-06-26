@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Poppins, serif;
+    }
+    h1 {
+        @apply text-4xl font-bold
+    }
+    h2 {
+        @apply text-2xl font-bold
+    }
+    h3 {
+        @apply text-xl font-bold
+    }
+    label {
+        @apply font-semibold block
+    }
+    input, select {
+        @apply block border border-gray-200 w-full px-4 py-2 rounded mt-1 mb-3 hover:border-primary duration-300 focus:outline-0 focus:border-primary
+    }
+}
+
+@layer components {
+    .primary-button {
+        @apply text-white font-bold bg-primary px-6 py-3 rounded hover:brightness-125 active:brightness-90 duration-200
+    }
+}
