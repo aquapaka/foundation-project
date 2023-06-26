@@ -6,19 +6,19 @@ type PartnerShip = {
 const partnerShips: PartnerShip[] = [
     {
         name: "Google",
-        imageUrl: "~/assets/img/partnerships/google.webp"
+        imageUrl: "/img/partnerships/google.webp"
     },
     {
         name: "Amazon",
-        imageUrl: "~/assets/img/partnerships/amazon.webp"
+        imageUrl: "/img/partnerships/amazon.webp"
     },
     {
         name: "Dhanbad",
-        imageUrl: "~/assets/img/partnerships/iit-dhanbad.webp"
+        imageUrl: "/img/partnerships/iit-dhanbad.webp"
     },
     {
         name: "Roorkee",
-        imageUrl: "~/assets/img/partnerships/iit-roorkee.webp"
+        imageUrl: "/img/partnerships/iit-roorkee.webp"
     },
 ]
 
