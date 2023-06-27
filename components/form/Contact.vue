@@ -35,8 +35,8 @@
         <option>Grade 3</option>
       </select>
     </div>
-    <button @click="submitForm()" class="primary-button w-full mt-4">Try a free class</button>
-    <p class="text-center text-xs my-3">1000+ slots booked in last 24 hours</p>
+    <button @click="submitForm()" class="primary-button w-full mt-4" :class="isContactInfoSent ? 'bg-secondary' : ''" :disabled="isContactInfoSent">{{isContactInfoSent ? "Your information has been sent" : "Try a free class"}}</button>
+    <p class="text-center text-xs my-3" v-if="isContactInfoSent">1000+ slots booked in last 24 hours</p>
     <p class="text-xs">By signing up, you agree to the Terms of Service and Privacy Policy. You also agree that you have parental consent. Important updates will be sent via WhatsApp.</p>
   </div>
 
@@ -57,6 +57,8 @@ const formErrorInitialState = {
   gradeError: false,
 }
 const formError = ref(formErrorInitialState);
+
+const isContactInfoSent = ref(false);
 
 function checkPhoneInput(evt: KeyboardEvent): void {
   const keysAllowed: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -91,7 +93,9 @@ function submitForm() {
         branch: formData.value.branchSelection,
         grade: formData.value.gradeSelection,
       }
-    });
+    }).then(() => {
+      isContactInfoSent.value = true;
+    })
   }
 }
 </script>
