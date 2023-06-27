@@ -80,10 +80,18 @@ function submitForm() {
 
   // Submit if no error
   if( !formError.value.nameError &&
-      !formError.value.phoneError &&
-      !formError.value.branchError &&
-      !formError.value.gradeError) {
-    console.log("Submit form!");
+  !formError.value.phoneError &&
+  !formError.value.branchError &&
+  !formError.value.gradeError) {
+    $fetch('/api/sentContactInfo', {
+      method: 'post',
+      body: {
+        name: formData.value.name,
+        phone: formData.value.phone,
+        branch: formData.value.branchSelection,
+        grade: formData.value.gradeSelection,
+      }
+    });
   }
 }
 </script>
